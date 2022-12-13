@@ -11,6 +11,7 @@
     <button id="lower-case">Lower Case</button>
     <button id="proper-case">Proper Case</button>
     <button id="sentence-case">Sentence Class</button>
+    <button id="save-text-file">Sentence Class</button>
     <script>
         let textarea = document.getElementById("textarea");
 
@@ -28,6 +29,24 @@
 
         document.getElementById("sentence-case").addEventListener("click", function() {
             textarea.value = textarea.value.toLowerCase().split(". ").map(string => string[0].toUpperCase() + string.substring(1)).join(". ");
+        });
+
+        document.getElementById("save-text-file").addEventListener("click", function() {
+            function download(filename, text) {
+                let element = document.createElement('a');
+                element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+                element.setAttribute('download', filename);
+
+                element.style.display = 'none';
+                document.body.appendChild(element);
+
+                element.click();
+
+                document.body.removeChild(element);
+            }
+
+            // Start file download.
+            download("text.txt", textarea.value);
         });
     </script>
 </body>
