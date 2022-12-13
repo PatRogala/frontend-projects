@@ -6,11 +6,15 @@ console.log("1 USD equals 113.5 JPY");
 console.log("1 USD equals 0.89 EUR");
 console.log("1 USD equals 74.36 RUB");
 console.log("1 USD equals 0.75 GBP");
-console.log("I can convert USD to these currencies: JPY, EUR, RUB, USD, GBP");
-console.log("Type the currency you wish to convert: USD");
+console.log("What do you want to convert?");
+const fromCurrency = input("From: ").toUpperCase();
+if (fromCurrency !== "USD" && fromCurrency !== "JPY" && fromCurrency !== "EUR" && fromCurrency !== "RUB" && fromCurrency !== "GBP") {
+    console.log("Unknown currency");
+    return;
+}
 
-let currency = input("To: ").toUpperCase();
-if (currency !== "USD" && currency !== "JPY" && currency !== "EUR" && currency !== "RUB" && currency !== "GBP") {
+let toCurrency = input("To: ").toUpperCase();
+if (toCurrency !== "USD" && toCurrency !== "JPY" && toCurrency !== "EUR" && toCurrency !== "RUB" && toCurrency !== "GBP") {
     console.log("Unknown currency");
     return;
 }
@@ -26,18 +30,41 @@ if (isNaN(amount)) {
     return;
 }
 
-if (currency === "USD") {
-    console.log(`Result: ${amount} USD equals ${(amount).toFixed(4)} USD`);
+let newAmount;
+
+switch(fromCurrency) {
+    case "USD":
+        newAmount = amount;
+        break;
+    case "JPY":
+        newAmount = amount / 113.5;
+        break;
+    case "EUR":
+        newAmount = amount / 0.89;
+        break;
+    case "RUB":
+        newAmount = amount / 74.36;
+        break;
+    case "GBP":
+        newAmount = amount / 0.75;
+        break;
+    default:
+        console.log("error!");
+        break;
 }
-else if (currency === "JPY") {
-    console.log(`Result: ${amount} USD equals ${(amount * 113.5).toFixed(4)} JPY`);
+
+if (toCurrency === "USD") {
+    console.log(`Result: ${amount} ${fromCurrency} equals ${(newAmount).toFixed(4)} USD`);
 }
-else if (currency === "EUR") {
-    console.log(`Result: ${amount} USD equals ${(amount * 0.89).toFixed(4)} EUR`);
+else if (toCurrency === "JPY") {
+    console.log(`Result: ${amount} ${fromCurrency} equals ${(newAmount * 113.5).toFixed(4)} JPY`);
 }
-else if (currency === "RUB") {
-    console.log(`Result: ${amount} USD equals ${(amount * 74.36).toFixed(4)} RUB`);
+else if (toCurrency === "EUR") {
+    console.log(`Result: ${amount} ${fromCurrency} equals ${(newAmount * 0.89).toFixed(4)} EUR`);
 }
-else if (currency === "GBP") {
-    console.log(`Result: ${amount} USD equals ${(amount * 0.75).toFixed(4)} GBP`);
+else if (toCurrency === "RUB") {
+    console.log(`Result: ${amount} ${fromCurrency} equals ${(newAmount * 74.36).toFixed(4)} RUB`);
+}
+else if (toCurrency === "GBP") {
+    console.log(`Result: ${amount} ${fromCurrency} equals ${(newAmount * 0.75).toFixed(4)} GBP`);
 }
