@@ -1,0 +1,23 @@
+body {
+    background: #276b39;
+    height: 100vh;
+}
+
+kbd {
+    width: 60px;
+    height: 200px;
+    background: white;
+    border: 2px solid gray;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 50px;
+    font-size: 1.5rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
