@@ -6,10 +6,29 @@
 </head>
 <body>
     <div class="title">Case Converter</div>
-    <textarea></textarea>
+    <textarea id="textarea"></textarea>
     <button id="upper-case">Upper Case</button>
     <button id="lower-case">Lower Case</button>
     <button id="proper-case">Proper Case</button>
     <button id="sentence-case">Sentence Class</button>
+    <script>
+        let textarea = document.getElementById("textarea");
+
+        document.getElementById("upper-case").addEventListener("click", function() {
+            textarea.value = textarea.value.toUpperCase();
+        });
+
+        document.getElementById("lower-case").addEventListener("click", function() {
+            textarea.value = textarea.value.toLowerCase();
+        });
+
+        document.getElementById("proper-case").addEventListener("click", function() {
+            textarea.value = textarea.value.toLowerCase().split(" ").map(string => string[0].toUpperCase() + string.substring(1)).join(" ");
+        });
+
+        document.getElementById("sentence-case").addEventListener("click", function() {
+            textarea.value = textarea.value.toLowerCase().split(". ").map(string => string[0].toUpperCase() + string.substring(1)).join(". ");
+        });
+    </script>
 </body>
 </html>
