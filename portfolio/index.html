@@ -3,35 +3,55 @@
 <head>
     <meta charset="utf-8">
     <title>Hello, World!</title>
+    <link rel="stylesheet" href="css.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contacts">Contact</a></li>
-        </ul>
-    </nav>
     <header>
-        <h1>Patryk Rogala, Ruby on Rails Developer</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contacts">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Patryk Rogala,<br> Ruby on Rails Developer</h1>
     </header>
     <section id="about">
-        <h2>About me</h2>
-        <img src="images/person.jpg" alt="person">
-        <p>What can i say?</p>
+        <div class="images">
+            <img id="person-bg" src="images/image.jpg" alt="bg image">
+            <img id="person" src="images/person.jpg" alt="person">
+        </div>
+        <div class="personal-info">
+            <h2>About me</h2>
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi, culpa, deserunt dolor doloribus eius fuga harum ipsam laborum maiores molestias omnis possimus, repellendus sunt tempore tenetur vel voluptatibus voluptatum.</span><span>A, aliquid aperiam atque commodi corporis dignissimos doloribus ducimus eos facere fugiat iste libero magnam maiores molestiae mollitia numquam provident quam quas quasi, qui quibusdam, quisquam repellat sapiente sit temporibus.</span><span>Aliquid aperiam impedit itaque minima odit soluta totam. Accusantium alias aliquam aut distinctio, dolor dolore eius hic impedit non odio? Autem consequatur excepturi fuga incidunt laudantium, molestiae nihil officia quaerat.</span></p>
+        </div>
     </section>
     <section id="portfolio">
         <h2>Portfolio</h2>
-        <img src="images/project1.png" alt="project1">
-        <p>Project 1</p>
+        <div class="projects">
+            <div class="project-card">
+                <img src="images/project1.png" alt="project1">
+                <p>Flashcards</p>
+            </div>
+            <div class="project-card">
+                <img src="images/project2.png" alt="project2">
+                <p>Virtual Piano</p>
+            </div>
+        </div>
     </section>
     <section id="contacts">
         <h2>Contacts</h2>
-        <p>Phone: 123456789</p>
-        <p>Email: example@gmail.com</p>
+        <p>You can contact me at <a href="mailto:test@hyperskill.org">test@hyperskill.org</a>
+        <br> or phone number - <a href="tel:1234567890">1234567890</a></p>
+        <ul>
+            <li><img src="images/github.svg" alt="social"></li>
+            <li><img src="images/facebook.svg" alt="social"></li>
+            <li><img src="images/twitter.svg" alt="social"></li>
+            <li><img src="images/instagram 1.svg" alt="social"></li>
+        </ul>
     </section>
     <footer>
-        <p>Patryk Rogala, 2022</p>
+        <p><span class="name">Patryk Rogala</span><br> 2022</p>
     </footer>
 </body>
 </html>
