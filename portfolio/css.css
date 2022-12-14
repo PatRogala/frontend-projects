@@ -134,6 +134,19 @@ header h1 {
     margin: 20px;
 }
 
+#portfolio .open-window {
+    padding: 10px 20px;
+    border: none;
+    background: #000;
+    color: #fff;
+    margin: 20px 0;
+}
+
+#portfolio .open-window:hover {
+    background: #DDD;
+    color: #000;
+}
+
 /* Contact */
 #contacts {
     display: flex;
@@ -175,4 +188,68 @@ footer .name {
     font-family: serif;
     font-size: 1.5rem;
     font-weight: 400;
+}
+
+/* Modal */
+.window {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.window.active {
+    display: block;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 7px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #666666;
+    display: none;
+}
+
+.modal-content.active {
+    display: flex;
+}
+
+.modal-content h2 {
+    margin: 20px;
+    font-family: monospace;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.modal-content p {
+    text-align: center;
+}
+
+.modal-content .close-window {
+    padding: 10px 20px;
+    border: none;
+    background: #000;
+    color: #fff;
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+.modal-content .close-window:hover {
+    background: #DDD;
+    color: #000;
 }

@@ -31,11 +31,11 @@
         <div class="projects">
             <div class="project-card">
                 <img src="images/project1.png" alt="project1">
-                <p>Flashcards</p>
+                <button class="open-window" id="flashcards">Flashcards</button>
             </div>
             <div class="project-card">
                 <img src="images/project2.png" alt="project2">
-                <p>Virtual Piano</p>
+                <button class="open-window" id="piano">Virtual Piano</button>
             </div>
         </div>
     </section>
@@ -53,5 +53,19 @@
     <footer>
         <p><span class="name">Patryk Rogala</span><br> 2022</p>
     </footer>
+    <!-- Modal -->
+    <div class="window">
+        <div class="modal-content" id="flashcards-modal">
+            <h2>Flashcards</h2>
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi, culpa, deserunt dolor doloribus eius fuga harum ipsam laborum maiores molestias omnis possimus, repellendus sunt tempore tenetur vel voluptatibus voluptatum.</span><span>A, aliquid aperiam atque commodi corporis dignissimos doloribus ducimus eos facere fugiat iste libero magnam maiores molestiae mollitia numquam provident quam quas quasi, qui quibusdam, quisquam repellat sapiente sit temporibus.</span><span>Aliquid aperiam impedit itaque minima odit soluta totam. Accusantium alias aliquam aut distinctio, dolor dolore eius hic impedit non odio? Autem consequatur excepturi fuga incidunt laudantium, molestiae nihil officia quaerat.</span></p>
+            <button class="close-window">Close</button>
+        </div>
+        <div class="modal-content" id="piano-modal">
+            <h2>Piano</h2>
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi, culpa, deserunt dolor doloribus eius fuga harum ipsam laborum maiores molestias omnis possimus, repellendus sunt tempore tenetur vel voluptatibus voluptatum.</span><span>A, aliquid aperiam atque commodi corporis dignissimos doloribus ducimus eos facere fugiat iste libero magnam maiores molestiae mollitia numquam provident quam quas quasi, qui quibusdam, quisquam repellat sapiente sit temporibus.</span><span>Aliquid aperiam impedit itaque minima odit soluta totam. Accusantium alias aliquam aut distinctio, dolor dolore eius hic impedit non odio? Autem consequatur excepturi fuga incidunt laudantium, molestiae nihil officia quaerat.</span></p>
+            <button class="close-window">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
