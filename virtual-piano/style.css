@@ -3,7 +3,13 @@ body {
     height: 100vh;
 }
 
-kbd {
+.container {
+    position: relative;
+    margin: 200px auto;
+    width: 500px;
+}
+
+.white-keys kbd {
     width: 60px;
     height: 200px;
     background: white;
@@ -15,9 +21,52 @@ kbd {
     font-size: 1.5rem;
 }
 
-.container {
+.white-keys, .black-keys {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    position: absolute;
 }
+
+.black-keys {
+    z-index: 1;
+}
+
+.black-keys kbd {
+    width: 40px;
+    height: 90px;
+    background: black;
+    border: 2px solid gray;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 50px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.black-keys {
+    top: 0;
+    left: 40px;
+}
+
+#e {
+    position: relative;
+    left: 20px;
+}
+
+#t {
+    position: relative;
+    left: 105px;
+}
+
+#y {
+    position: relative;
+    left: 125px;
+}
+
+#u {
+    position: relative;
+    left: 145px;
+}
+
