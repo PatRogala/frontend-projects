@@ -253,3 +253,70 @@ footer .name {
     background: #DDD;
     color: #000;
 }
+
+/* Hambuger Menu */
+.hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    header ul {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+    .line {
+        width: 30px;
+        height: 3px;
+        background: #fff;
+        margin: 5px 0;
+    }
+
+    .hamburger.toggle .line:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .hamburger.toggle .line:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.toggle .line:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    .nav-links {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background: #000;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        display: none;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+    .nav-links.active {
+        transform: translateX(0);
+    }
+    .nav-links li {
+        margin: 20px 0;
+    }
+    .nav-links li a {
+        color: #fff;
+        font-size: 2rem;
+    }
+    .nav-links li a:hover {
+        color: #DDD;
+    }
+}

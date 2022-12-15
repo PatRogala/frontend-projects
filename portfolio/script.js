@@ -16,3 +16,12 @@ for (let i = 0; i < closeButtons.length; i++) {
         document.querySelector(".modal").classList.remove("active");
     });
 }
+
+// Hamburger menu
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+    hamburger.classList.toggle("toggle");
+});
