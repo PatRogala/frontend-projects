@@ -2,6 +2,7 @@
     stroke-dasharray: 1200px;
     stroke-dashoffset: 1200px;
     animation: draw 5s ease forwards;
+    animation-iteration-count: infinite;
 }
 
 @keyframes draw {
