@@ -6,3 +6,4 @@ Some of cool effects i found online for frontend projects
 - [Liquid Effect](./liquid-effect/)
 - [SVG Signature Writting](./svg-signature/)
 - [65 Beautiful CSS checkboxes](https://getcssscan.com/css-checkboxes-examples?ref=producthunt)
+- [Flexbox Explained](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
